@@ -1,0 +1,308 @@
+html {
+  width: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0; /* light gray background color */
+    background-image: url('background-image.jpg'); /* add a background image of trees or plants */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+  }
+  
+  header {
+    background-color: #fff; /* dark background for header */
+    color: #fff; /* white text for header */
+    padding: 9px;
+    text-align: center;
+  }
+  
+  .hero-img, #service-area {
+      width: 40%;
+      height: 50%;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      border-radius: 5%;
+  }
+
+  header p {
+    color: #333;
+  }
+
+  
+
+  nav {
+    background-color: #333;
+    padding-top: 9px;
+  }
+
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  nav li {
+    margin-right: 20px;
+  }
+  
+  nav a {
+    color: #fff; /* white text for links */
+    text-decoration: none;
+  }
+  
+  nav a:hover {
+    color: #ccc; /* light gray text on hover */
+  }
+  
+  h1 {
+    font-size: 36px;
+    color: #4caf50; /* green text color for h1 */
+    
+  }
+
+
+  
+  p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #333; /* dark text color for p */
+  }
+  
+  section {
+    padding: 40px;
+    background-color: #fff; /* white background for sections */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #about {
+    background-color: #333;
+    margin: 0px;
+
+  }
+
+  #about p {
+    color: white;
+    margin: 0px;
+    padding-bottom: 0px;
+    padding-top: 3px;
+  }
+
+  #about a {
+    color: yellow;
+  }
+
+  #about li {
+    color: white;
+    font-size: 18px;
+  }
+  #services {
+    background-color: #333;
+    width: 70%;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+  }
+  #services a {
+    color: yellow;
+  }
+
+  #services li {
+    color: white;
+  }
+
+  #service-area {
+    background-color: #333;
+    width: 50%;
+  }
+
+  #service-area li {
+    color: white;
+  }
+
+  #container {
+    display: flex;
+    width: 100%;
+  }
+
+  form {
+    width: 70%
+  }
+
+
+#name-input, #email-input, #phone-input {
+  width: 60%;
+}
+
+
+  #quote-about {
+    width: 70%;
+    padding: 15px;
+  }
+  #service {
+    margin-bottom: 15px;
+  }
+
+  #fblogo, #email, #phone {
+    height: 50px;
+    width: 50px;
+  }
+
+  section p {
+    max-width: 800px;
+  }
+  
+  h2 {
+    font-size: 32px;
+    margin-top: 0px;
+    color: #4caf50; /* green text color for h2 */
+  }
+
+  h3 {
+    font-size: 24px;
+    margin-top: 0px;
+    color: #4caf50
+  }
+  
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    list-style-type: square; 
+  }
+  
+  li {
+    margin-bottom: 10px;
+    color: #333; /* dark text color for li */
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  label {
+    font-size: 16px;
+    color: #333; /* dark text color for labels */
+  }
+  
+  input,
+  textarea {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #fff; /* white background for inputs */
+  }
+  
+  button {
+    background-color: #4caf50;
+    font-size: 18px;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    height: 69px;
+    width: 169px;
+    border-radius: 10%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+  
+  button a {
+    font-size: 18px;
+  }
+  button:hover {
+    background-color: yellow; /* A darker shade of red for the example */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+    transform: translateY(-2px); /* Slight lift effect */
+    color: black;
+  }
+
+
+  
+  .contact-info {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 10%;
+  }
+
+  footer {
+    background-color: #333; /* dark background for footer */
+    color: #fff; /* white text for footer */
+    padding: 1px;
+    text-align: center;
+  }
+  footer p {
+    color: #fff;
+  }
+  
+  #phone-container {
+    /* Positioning to make sure the tooltip appears correctly */
+    position: relative;
+    display: inline-block;
+}
+
+#phone-container:hover::after {
+    content: "952-857-9954"; /* Replace with actual phone number */
+    position: absolute;
+    top: 100%; /* Position it below the image */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for exact centering */
+    background-color: #333; /* Dark background for visibility */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    white-space: nowrap; /* Prevents line breaks */
+    z-index: 1; /* Ensure it appears above other elements */
+}
+
+/* Optional: Add a slight delay to prevent accidental hovers */
+#phone-container::after {
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+#phone-container:hover::after {
+    opacity: 1;
+}
+
+#email-container {
+  /* Positioning to make sure the tooltip appears correctly */
+  position: relative;
+  display: inline-block;
+}
+
+#email-container:hover::after {
+  content: "Tktreeservicellc@gmail.com"; /* Replace with actual phone number */
+  position: absolute;
+  top: 100%; /* Position it below the image */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Adjust for exact centering */
+  background-color: #333; /* Dark background for visibility */
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  white-space: nowrap; /* Prevents line breaks */
+  z-index: 1; /* Ensure it appears above other elements */
+}
+
+/* Optional: Add a slight delay to prevent accidental hovers */
+#email-container::after {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+#email-container:hover::after {
+  opacity: 1;
+}

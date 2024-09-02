@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Quote - TK Tree Services</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+        <nav>
+            <ul>
+                <li><a href="index.html#about">About Us</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#locations">Service Area</a></li>
+                <li><a href="free-quote.html">Free Quote</a></li>
+            </ul>
+        </nav>
+
+        <section id="quote-form">
+            <h2>Request Your Free Quote</h2>
+            <p>Reduce the risk of storm damage through proactive care.</p>
+            <form action="/submit-quote" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name-input" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email-input" name="email" required>
+
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone-input" name="phone">
+
+                <label for="service">Service Needed:</label>
+                <select id="service" name="service" required>
+                    <option value="">Select Service</option>
+                    <option value="tree_removal">Tree Removal</option>
+                    <option value="tree_trimming">Tree Trimming</option>
+                    <!-- Add more options as needed -->
+                </select>
+
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" rows="4" cols="50"></textarea>
+
+                <a><button type="submit">Submit</button></a>
+            </form>
+            <p id="quote-about">Tom Keiran is a certified arborist, lifelong Minnesotan and owner of TK Tree Service. He brings a deep commitment to the community and drive for enhancing and preserving the health and beauty of our trees.</p>
+            </section>
+
+    <footer>
+        <p>&copy; <span id="year"></span> TK Tree Services. All rights reserved.</p>
+      </footer>
+      <script src="script.js"></script>
+</body>
+</html>
