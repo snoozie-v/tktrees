@@ -1,25 +1,29 @@
 const express = require('express');
-const path = require('path');
-
+// const nodemailer = require('nodemailer');
 const app = express();
 const port = process.env.PORT || 3000;
-
-// Middleware to parse JSON and URL-encoded bodies
-app.use(express.json());
+const path = require('path');
+const cors = require('cors');
+app.use(cors());
 app.use(express.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, '../public')));
 
-// Serve static files from the 'public' folder which is a sibling to 'backEnd'
-app.use(express.static(path.join(__dirname, '..', 'public')));
-
-// Route for root path
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '..', 'public', 'index.html'));
-});
+// Nodemailer setup
+// const transporter = nodemailer.createTransport({
+//     host: 'smtp.gmail.com',
+//     port: 587,
+//     secure: false, // Use TLS but not SSL
+//     auth: {
+//         user: 'your-email@gmail.com',
+//         pass: 'your-app-password-or-oauth2-token'
+//     }
+// });
 
 app.post('/submit-quote', (req, res) => {
     const { name, email, phone, service, description } = req.body;
-    console.log(req.body);
-    res.sendFile(path.join(__dirname, '..', 'public', 'thank-you.html'));
+    console.log(req.body)
+    res.sendFile(path.join(__dirname, '../public/thank-you.html'));
+
 });
 
 app.listen(port, () => {
