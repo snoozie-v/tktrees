@@ -137,6 +137,10 @@ body {
     width: 70%
   }
 
+  #thank-you {
+    display: grid;
+    flex-direction: column;
+  }
 
 #name-input, #email-input, #phone-input {
   width: 60%;
