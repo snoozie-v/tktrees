@@ -16,10 +16,15 @@ app.get('/', (req, res) => {
 });
 
 app.post('/submit-quote', (req, res) => {
-    const { name, email, phone, service, description } = req.body
-    console.log(req.body)
-    res.sendFile(path.join(__dirname, '..', 'public/thank-you.html'))
-})
+    try {
+        const { name, email, phone, service, description } = req.body;
+        console.log(req.body);
+        res.sendFile(path.join(__dirname, '..', 'public', 'thank-you.html'));
+    } catch (error) {
+        console.error('Error processing request:', error);
+        res.status(400).send('Invalid request data');
+    }
+});
 
 app.listen(port, () => {
     console.log(`Server running on port ${port}`);
